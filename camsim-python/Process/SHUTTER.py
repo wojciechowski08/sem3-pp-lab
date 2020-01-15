@@ -1,7 +1,7 @@
 from Process.OBJECTS import oShutter
 
 
-def openShutter():
+def SHopenShutter():
     if not oShutter.getEnclosureState():
         oShutter.setEnclosureState(1)
     else:
@@ -9,7 +9,7 @@ def openShutter():
         # shutter already opened
 
 
-def closeShutter():
+def SHcloseShutter():
     if oShutter.getEnclosureState():
         oShutter.setEnclosureState(0)
     else:
@@ -17,7 +17,7 @@ def closeShutter():
         # shutter already closed
 
 
-def openForCapturing():
+def SHopenForCapturing():
     if not oShutter.getState():
         if oShutter.getEnclosureState():
             oShutter.setEnclosureState(0)
@@ -28,7 +28,7 @@ def openForCapturing():
         # shutter occupied
 
 
-def closeFromCapturing():
+def SHcloseFromCapturing():
     if oShutter.getState():
         oShutter.setEnclosureState(0)
         oShutter.setState(0)

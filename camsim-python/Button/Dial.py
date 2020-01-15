@@ -9,10 +9,10 @@ class Dial(Button):
         self.name = name
         self.state = 0
 
-    # def getname(self):
+    # def getName(self):
     #     return self.name
 
-    # def getstate(self):
+    # def getState(self):
     #     return self.state
 
     # def reset(self):

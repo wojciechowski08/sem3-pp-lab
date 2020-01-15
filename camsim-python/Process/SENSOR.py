@@ -3,16 +3,16 @@ import time
 from Process.OBJECTS import oSensor
 
 
-def turnON():
+def SturnON():
     oSensor.setState(0)
 
 
-def turnOFF():
+def SturnOFF():
     oSensor.setState(-1)
     # finish on-going processes
 
 
-def goIntoLiveView():
+def SgoIntoLiveView():
     if oSensor.getState() == 0:
         if oSensor.getAction() != "lv":
             oSensor.setAction("lv")
@@ -27,7 +27,7 @@ def goIntoLiveView():
         # sensor is switched off
 
 
-def capturePhoto() -> str:
+def ScapturePhoto() -> str:
     if oSensor.getState() == 0:
         oSensor.setState(1)
         oSensor.setAction("capturing")
@@ -43,7 +43,7 @@ def capturePhoto() -> str:
         # sensor is switched off
 
 
-def cleanSensor():
+def ScleanSensor():
     if oSensor.getState() == 0:
         oSensor.setState(1)
         oSensor.setAction("cleaning")

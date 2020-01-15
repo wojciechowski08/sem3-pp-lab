@@ -10,6 +10,7 @@ class Shutter:
         self.longest = 10.0
         self.speed = defaultSS
         self.state = 0
+        self.enclosure = 0
 
     def getFastestSpeed(self):
         return self.fastest
@@ -28,8 +29,10 @@ class Shutter:
             return False
 
     def getState(self):
-        return self.speed
+        return self.state
 
+    # def setState(self, newState):
+    #     self.state = newState
     def setState(self, newState) -> bool:
         if newState != self.state:
             self.state = newState

@@ -1,9 +1,8 @@
 import errno
 import os
 
-from Process.OBJECTS import initiate
+# from Process.OBJECTS import initiate
 from UI.Interface import openUI
-
 
 def run():
 
@@ -29,7 +28,6 @@ def run():
 #     cs.close
 #
 # run()
-    initiate()
     openUI()
 
 run()

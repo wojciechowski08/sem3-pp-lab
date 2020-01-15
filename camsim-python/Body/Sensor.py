@@ -6,13 +6,15 @@ class Sensor:
     maxISO: int
     minISO: int
     state: int  # off -1 ready 0 occupied 1
-    action: str  # live view, capturing picture, cleaning
+    action: str  #  lv - live view, capturing picture, cleaning
+    ISO: int
 
-    def Sensor(self, maxISO, minISO):
+    def __init__(self, maxISO, minISO):
         self.maxISO = maxISO
         self.minISO = minISO
         self.state = 0
         self.action = "standby"
+        self.ISO = 100
 
     def getMinISO(self) -> int:
         return self.minISO
@@ -46,3 +48,10 @@ class Sensor:
 
     def readLight(self) -> str:
         return ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
+
+    def getISO(self) -> int:
+        return self.ISO
+
+    def setISO(self, newISO) -> bool:
+        self.ISO = newISO
+        return True

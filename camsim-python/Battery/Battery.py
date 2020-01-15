@@ -1,6 +1,6 @@
 class Battery:
     percentage:float # from 0 to 1
-    state:int # 0 or 1
+    state:int # out 0 or in 1
 
     def __init__(self):
         self.percentage = 1

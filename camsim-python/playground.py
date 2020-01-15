@@ -119,3 +119,37 @@
 #
 #
 #
+
+# class A:
+#     def __init__(self):
+#         self.a = 1
+#         self._b =2
+#         self.__c=3
+#
+#     def geta(self):
+#         return self.a
+#     def getb(self):
+#         return self.b
+#     def getc(self):
+#         return self.c
+#
+#     def getA(self):
+#         return self.a
+#     def getB(self):
+#         return self._b
+#     def getC(self):
+#         return self.__c
+#
+#     def seta(self,a):
+#         self.a = a
+#     def setb(self,b):
+#         self.b = b
+#     def setc(self,c):
+#         self.c = c
+#
+#     def setA(self,a):
+#         self.a = a
+#     def setB(self,b):
+#         self._b = b
+#     def setC(self,c):
+#         self.__c = c

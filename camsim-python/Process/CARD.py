@@ -4,15 +4,15 @@ from File.Photo import Photo
 from Process.OBJECTS import oCard
 
 
-def putIN():
+def CputIN():
     oCard.setState(1)
 
 
-def pullOUT():
+def CpullOUT():
     oCard.setState(0)
 
 
-def change() -> bool:
+def Cchange() -> bool:
     if oCard.getState():
         # change and come to same card option for further dev
         oCard.setState(0)
@@ -23,7 +23,7 @@ def change() -> bool:
         return False
 
 
-def writeToCard(photo: Photo):
+def CwriteToCard(photo: Photo):
     if oCard.getState():
         if not oCard.getUsageState():
             oCard.setInUsageState(1)
@@ -43,7 +43,7 @@ def writeToCard(photo: Photo):
         # info about empty card slot
 
 
-def readFromCard(currentPhoto=0):
+def CreadFromCard(currentPhoto=0):
     if oCard.getState():
         if not oCard.getUsageState():
             oCard.setInUsageState(1)
@@ -51,6 +51,7 @@ def readFromCard(currentPhoto=0):
             time.sleep(temp.size / oCard.getReadSpeed())
             # show info about photo
             oCard.setInUsageState(0)
+            return temp.showPhoto()
         else:
             pass
             # info about busy card
@@ -59,7 +60,7 @@ def readFromCard(currentPhoto=0):
         # info about empty card slot
 
 
-def removePhoto(currentPhoto=0):
+def CremovePhoto(currentPhoto=0):
     if oCard.getState():
         if not oCard.getUsageState():
             oCard.setInUsageState(1)

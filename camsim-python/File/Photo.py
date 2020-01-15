@@ -19,3 +19,6 @@ class Photo(File):
 
     def getExposureLevel(self) -> float:
         return self.exposureLevel
+
+    def showPhoto(self):
+        print(self.getName(), self.getExtension(), self.getSize(), self.getTime(), self.getData())

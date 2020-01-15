@@ -1,15 +1,15 @@
 from Process.OBJECTS import oLens, oAperture
 
 
-def putON():
+def LputON():
     oLens.setState(1)
 
 
-def takeOFF():
+def LtakeOFF():
     oLens.setState(0)
 
 
-def encloseAperture():
+def LencloseAperture():
     if oLens.getState():
         if not oAperture.getState():
             oAperture.setState(1)
@@ -21,7 +21,7 @@ def encloseAperture():
         # cant enclose, lens not put on
 
 
-def reopenAperture():
+def LreopenAperture():
     if oAperture.getState():
         oAperture.setState(0)
     else:
